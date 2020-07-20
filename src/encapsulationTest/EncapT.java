@@ -11,6 +11,7 @@ public class EncapT {
 		System.out.println(num.getPolicy());
 		
 		
+		
 
 	}
 

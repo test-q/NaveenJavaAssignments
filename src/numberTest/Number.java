@@ -29,6 +29,4 @@ public class Number {
 	public void setName(String name) {
 		this.name = name;
 	}
-	
-
 }
