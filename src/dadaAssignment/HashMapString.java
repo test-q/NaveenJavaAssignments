@@ -33,6 +33,16 @@ public class HashMapString {
 		
 		//katake
 		//k 1
+		
+		
+		Integer test = new Integer(10);
+		System.out.println(test.toString());
+		System.out.println(test.compareTo(9));
+		
+		int test1 = 20;
+		
+		
+		
 	
 	}
 
