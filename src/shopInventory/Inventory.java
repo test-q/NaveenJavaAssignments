@@ -8,6 +8,7 @@ import java.util.StringTokenizer;
 
 public class Inventory {
 
+	//Rupali
 	public static void main(String[] args) {
 		boolean flag = true;
 		ArrayList<Products> productList = new ArrayList<Products>();
