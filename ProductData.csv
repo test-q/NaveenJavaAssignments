@@ -1,0 +1,5 @@
+ProductID,ProductName,CategoryName,Price,Unit,Warranty
+1,Samsung Edge,Mobile,85000.0,56,1year
+2,Nokia2233,Mobile,21000.0,10,2year
+3,Samsung TV,TV,95000.0,5,1year
+4,OnePlus,TV,20500.0,5,1Year
