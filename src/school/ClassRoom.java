@@ -15,12 +15,15 @@ public class ClassRoom {
 		String header = "Name,Address,Roll Number,Marks,Gender";
 		ArrayList<Student> studentList = new ArrayList<Student>();
 		try {
-			if (fStudent.createNewFile()) {
-				FileWriter fHeader = new FileWriter(fStudent);
-				fHeader.write(header+"\n");
-				fHeader.close();
-			} else {
-				Scanner scfile = new Scanner(fStudent);
+//			if (fStudent.createNewFile()) {
+//				FileWriter fHeader = new FileWriter(fStudent);
+//				//fHeader.write(header+"\n");
+//				fHeader.close();
+//			} else {
+			if(!fStudent.exists()) {
+				fStudent.createNewFile();
+			}
+			Scanner scfile = new Scanner(fStudent);
 				while (scfile.hasNextLine()) {
 					String value = scfile.nextLine();
 
@@ -43,7 +46,8 @@ public class ClassRoom {
 					//System.out.println(value);
 				}
 				scfile.close();
-			}
+
+//			}
 
 			boolean bContinue = true;
 			Scanner sc = new Scanner(System.in);
@@ -104,9 +108,12 @@ public class ClassRoom {
 					String name = sc.nextLine();
 					for (Student s : studentList) {
 						if (s.getName().equalsIgnoreCase(name)) {
+							int index = studentList.indexOf(s);
 							System.out.print("Enter New Address.");
 							String newAdd = sc.nextLine();
 							s.setAddress(newAdd);
+							studentList.set(index, s);
+							
 						}
 					}
 					System.out.println("Student Updated Successfully.");
@@ -123,6 +130,7 @@ public class ClassRoom {
 //						fwrite.write(temp);
 //					}
 
+					fwrite.write(header+"\n");
 					for (Student curStudent : studentList) {
 						String temp = curStudent.getName() + "," + curStudent.getAddress() + ","
 								+ curStudent.getRollNo() + "," + curStudent.getMarks() + "," + curStudent.getGender()
